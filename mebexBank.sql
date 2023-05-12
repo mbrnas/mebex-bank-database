@@ -12,7 +12,7 @@ CREATE TABLE customers(
 );
 
 CREATE TABLE customers_iban(
-	id int,
+	customer_id int,
     constraint id_fk foreign key (id) references customers(id),
     iban VARCHAR(100) NOT NULL
 );

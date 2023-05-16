@@ -19,17 +19,17 @@ CREATE TABLE customers_iban(
 
 CREATE TABLE user_authentication(
 	id INT NOT NULL AUTO_INCREMENT,
-    username VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(100) NOT NULL,
 	constraint primary key (id)
 );
 
 CREATE TABLE user_registration(
 	id INT NOT NULL AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL UNIQUE ,
+    username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    PRIMARY KEY (id)
+    constraint PRIMARY KEY (id)
 );
 
 
